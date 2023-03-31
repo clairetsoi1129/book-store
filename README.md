@@ -11,6 +11,8 @@ npm install --save-dev nodemon
 npm install mongoose
 npm install --save-dev dotenv
 npm install body-parser
+npm install multer
+npm install express-validator
 ```
 
 ## How to launch in Dev

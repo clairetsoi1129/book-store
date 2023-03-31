@@ -2,6 +2,8 @@ if (process.env.NODE_ENV !== 'production'){
     require('dotenv').config()
 }
 
+// const errorHandler = require('./middlewares/errorHandler')
+
 const express = require('express')
 const app = express()
 const expressLayouts = require('express-ejs-layouts')
@@ -9,6 +11,7 @@ const bodyParser = require('body-parser')
 
 const indexRouter = require('./routes/index')
 const authorRouter = require('./routes/authors')
+const bookRouter = require('./routes/books')
 
 const mongoose = require('mongoose')
 mongoose.connect(process.env.DATABASE_URL, {useNewUrlParser: true})
@@ -26,5 +29,8 @@ app.use(bodyParser.urlencoded({ limit: '10mb', extended: false}))
 
 app.use('/', indexRouter)
 app.use('/authors', authorRouter)
+app.use('/books', bookRouter)
+
+// app.use(errorHandler)
 
 app.listen(process.env.PORT || 3000)
