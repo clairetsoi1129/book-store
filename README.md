@@ -12,6 +12,7 @@ npm install mongoose
 npm install --save-dev dotenv
 npm install body-parser
 npm install multer
+npm uninstall multer
 npm install express-validator
 ```
 
