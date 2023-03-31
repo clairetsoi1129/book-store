@@ -10,6 +10,7 @@ npm install express ejs express-ejs-layouts
 npm install --save-dev nodemon
 npm install mongoose
 npm install --save-dev dotenv
+npm install body-parser
 ```
 
 ## How to launch in Dev
