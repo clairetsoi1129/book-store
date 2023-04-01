@@ -13,13 +13,13 @@ authorSchema.pre("findOneAndDelete", async function (next) {
 
     // Book.find({ author: this._id}, (err, books) => {
     //     if (err) {
-    //         console.log('findOneAndDelete 1st error')
+    //         console.log(`findOneAndDelete err: ${err}`)
     //         next(err)
     //     } else if (books.length > 0){
     //         console.log('findOneAndDelete 2nd error')
     //         next(new Error('This author has books still'))
     //     } else {
-    //         console.log('findOneAndDelete 3rd')
+    //         console.log('findOneAndDelete next')
     //         next()
     //     }
     // })
@@ -35,7 +35,7 @@ authorSchema.pre("findOneAndDelete", async function (next) {
             next()
         }
     } catch (err) {
-        console.log(`findOneAndDelete other error: ${err}`)
+        console.log(`findOneAndDelete error: ${err}`)
         next(err)
     }
 });

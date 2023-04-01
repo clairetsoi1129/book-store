@@ -98,19 +98,15 @@ router.put('/:id', async (req, res) => {
 })
 
 router.delete('/:id', async (req, res) => {
-    console.log(`delete: ${req.params.id}`)
     let author
     try {
-        const deleteCount = await Author.findOneAndDelete({_id: req.params.id})
-        console.log(`delete1: ${deleteCount} `)
+        author = await Author.findOneAndDelete({_id: req.params.id})
         res.redirect('/authors')
     }catch (err){
         console.log(err)
         if (author == null){
-            console.log(`delete author is null : ${req.params.id}`)
             res.redirect('/')
         } else {
-            console.log(`delete author is not null: ${author.id}`)
             res.redirect(`authors/${author.id}`)
         }
     }
