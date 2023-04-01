@@ -38,7 +38,7 @@ router.post('/', async (req, res) => {
 
     console.log(`title: ${req.body.title} author: ${req.body.author}`)
     console.log(`publishDate: ${req.body.publishDate} pageCount: ${req.body.pageCount}`)
-    console.log(`coverImageName: ${fileName} description: ${req.body.description}`)
+    console.log(`description: ${req.body.description}`)
     const book = new Book({
         title: req.body.title,
         author: req.body.author,

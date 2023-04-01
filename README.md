@@ -13,6 +13,7 @@ npm install --save-dev dotenv
 npm install body-parser
 npm install multer
 npm uninstall multer
+npm install method-override
 npm install express-validator
 ```
 
@@ -25,3 +26,6 @@ npm run devStart
 ```
 npm run start
 ```
+
+## Reference
+https://pqina.nl/filepond/
